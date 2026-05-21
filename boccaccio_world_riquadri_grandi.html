@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600;700&family=MedievalSharp&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600;700');
 
 :root {
   --cream: #f5e0a6e3;
@@ -20,7 +20,7 @@
   --gold-pale: #f0e0a0;
   --red-medieval: #681d06;
   --red-light: #a82020;
-  --blue-medieval: #0a1a40;s
+  --blue-medieval: #0a1a40;
   --teal: #0a3a2a;
   --shadow: rgba(26,14,4,0.2);
   --shadow-deep: rgba(26,14,4,0.5);
@@ -40,8 +40,6 @@ body {
   font-size: 18px;
   line-height: 1.7;
   overflow-x: hidden;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
 }
 
 /* ─── NAVIGATION ─── */
@@ -53,7 +51,6 @@ nav {
   display: flex; align-items: center;
   padding: 0 2rem;
   box-shadow: 0 4px 20px var(--shadow-deep);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='1.5' fill='rgba(184,130,10,0.15)'/%3E%3C/svg%3E");
 }
 
 .nav-brand {
@@ -63,7 +60,6 @@ nav {
   letter-spacing: 0.03em;
   margin-right: auto;
   text-decoration: none;
-  
 }
 
 nav a.nav-link {
@@ -82,7 +78,6 @@ nav a.nav-link {
 }
 
 nav a.nav-link:hover, nav a.nav-link.active {
-  
   border-bottom-color: var(--gold);
   background: rgba(184,130,10,0.1);
 }
@@ -96,26 +91,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
   padding: calc(var(--nav-h) + 4rem) 2rem 6rem;
   position: relative;
   overflow: hidden;
-}
-
-#hero::before {
-  content: '';
-  position: absolute; inset:0;
-  background-image:
-    radial-gradient(ellipse 60% 40% at 50% 60%, rgba(184,130,10,0.07) 0%, transparent 70%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5 L55 28 L30 55 L5 28 Z' stroke='rgba(184,130,10,0.04)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
-#hero::after {
-  content: '';
-  position: absolute;
-  top: calc(var(--nav-h) + 2rem);
-  left: 50%; transform: translateX(-50%);
-  width: 600px; height: 600px;
-  border: 1px solid rgba(184,130,10,0.08);
-  border-radius: 50% 50% 0 0;
-  pointer-events: none;
 }
 
 .hero-ornament {
@@ -141,7 +116,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
 
 #hero h2 {
   font-family: 'EB Garamond', serif;
-  
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   color: var(--parchment);
   font-weight: 400;
@@ -166,7 +140,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
 }
 
 .hero-pill {
-  
   padding: 0.65rem 1.5rem;
   border: 2px solid var(--gold);
   color: var(--gold);
@@ -179,14 +152,12 @@ nav a.nav-link:hover, nav a.nav-link.active {
   border-radius: 10px;
   transition: all 0.25s;
   background: rgba(184,130,10,0.05);
-  
 }
 
 .hero-pill:hover {
   background: var(--gold);
   color: var(--ink);
   transform: translateY(-2px);
-  
 }
 
 /* ─── SECTIONS ─── */
@@ -251,442 +222,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
   margin: 1.5rem auto 0;
   position: relative;
 }
-.section-divider::before, .section-divider::after {
-  content: '◆';
-  position: absolute;
-  top: -0.55rem;
-  color: var(--gold);
-  font-size: 0.55rem;
-}
-.section-divider::before { left: 50%; transform: translateX(-50%); }
-.section-divider::after { display: none; }
-
-/* ─── VITA ─── */
-.vita-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.vita-sidebar {
-  position: sticky;
-  top: calc(var(--nav-h) + 2rem);
-}
-
-.vita-portrait {
-  width: 100%;
-  aspect-ratio: 3/4;
-  background: linear-gradient(135deg, var(--parchment) 0%, #c8b070 100%);
-  border: 7px solid var(--gold);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
-  color: var(--gold);
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  box-shadow: inset 0 0 40px rgba(184,130,10,0.1), 0 8px 30px var(--shadow-deep);
-}
-
-.vita-portrait::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    45deg, transparent, transparent 12px,
-    rgba(184,130,10,0.05) 12px, rgba(184,130,10,0.05) 13px
-  );
-}
-
-.vita-portrait::after {
-  content: '';
-  position: absolute; inset: 8px;
-  border: 1px solid rgba(184,130,10,0.3);
-  border-radius: 10px;
-  pointer-events: none;
-}
-
-.info-box {
-  border: 7px solid var(--border-strong);
-  background: var(--parchment);
-  padding: 1.2rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: inset 0 0 20px rgba(184,130,10,0.05);
-}
-
-.info-box h4 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.88rem;
-  color: var(--ink);
-  font-weight: 600;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.info-row {
-  display: flex; gap: 0.5rem;
-  font-size: 1rem;
-  padding: 0.3rem 0;
-  border-bottom: 3px solid rgba(184, 130, 10, 0.05);
-}
-
-.info-label {
-  font-family: 'Cinzel', serif;
-  font-weight: 600;
-  color: var(--ink-light);
-  min-width: 100px;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding-top: 2px;
-}
-
-.vita-content h3 {
-  font-family: 'UnifrakturMaguntia', 'Cinzel', serif;
-  font-size: 1.6rem;
-  color: var(--red-medieval);
-  margin: 2rem 0 0.8rem;
-  font-weight: 550;
-  border-left: 4px solid var(--gold);
-  padding-left: 1rem;
-  letter-spacing: 0.07em;
-}
-
-.vita-content p {
-  margin-bottom: 1rem;
-  color: var(--ink-light);
-  text-align: justify;
-  hyphens: auto;
-}
-
-.vita-content > p:first-of-type::first-letter {
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 4.5rem;
-  float: left;
-  line-height: 0.8;
-  margin-right: 0.15em;
-  color: var(--red-medieval);
-}
-
-.timeline {
-  position: relative;
-  margin: 2rem ;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 100px;
-  top: 0; bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--gold) 10%, var(--gold) 90%, transparent);
-}
-
-.tl-item {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  align-items: flex-start;
-}
-
-.tl-year {
-  font-family: 'Cinzel', serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--gold);
-  min-width: 80px;
-  text-align: right;
-  padding-top: 0.15rem;
-}
-
-.tl-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--gold);
-  border: 2px solid var(--parchment-dark);
-  flex-shrink: 0;
-  margin-top: 0.4rem;
-  box-shadow: 0 0 0 3px rgba(194, 146, 43, 0.25);
-}
-
-.tl-text {
-  font-size: 0.92rem;
-  color: var(--ink-light);
-  flex:1;
-}
-
-/* ─── OPERE ─── */
-.opere-filter {
-  display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.filter-btn {
-  padding: 0.4rem 1.2rem;
-  border: 2.5px solid var(--border-strong);
-  background: transparent;
-  color: var(--ink-light);
-  font-family: 'Cinzel', serif;
-  font-size: 0.77rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 7px;
-  transition: all 0.2s;
-}
-
-.filter-btn:hover, .filter-btn.active {
-  background: var(--gold);
-  color: var(--ink);
-  border-color: var(--gold);
-}
-
-.opere-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.opera-card {
-  background: var(--parchment);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--gold);
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: all 0.25s;
-  cursor: pointer;
-  box-shadow: 2px 2px 8px var(--shadow);
-}
-
-.opera-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--shadow);
-  border-color: var(--gold-light);
-}
-
-.opera-year {
-  font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-
-.opera-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.05rem;
-  color: var(--ink);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.opera-type {
-  display: inline-block;
-  padding: 0.15rem 0.7rem;
-  background: rgba(122,10,10,0.1);
-  color: var(--red-medieval);
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: 7px;
-  margin-bottom: 0.8rem;
-  border: 1px solid rgba(122,10,10,0.2);
-}
-
-.opera-desc {
-  font-size: 0.9rem;
-  color: var(--ink-light);
-  line-height: 1.6;
-}
-
-/* ─── DECAMERONE ─── */
-.deca-hero {
-  background: linear-gradient(135deg, var(--ink) 0%, #1a0804 100%);
-  color: var(--parchment);
-  padding: 4rem;
-  border-radius: 7px;
-  margin-bottom: 3rem;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--gold);
-  box-shadow: inset 0 0 60px rgba(184,130,10,0.05), 0 12px 40px var(--shadow-deep);
-}
-
-.deca-hero::before {
-  content: '❧';
-  position: absolute;
-  right: 3rem; top: 2rem;
-  font-size: 9rem;
-  color: rgba(184,130,10,0.08);
-  line-height: 1;
-}
-
-.deca-hero::after {
-  content: '';
-  position: absolute; inset: 10px;
-  border: 1px solid rgba(184,130,10,0.12);
-  pointer-events: none;
-}
-
-.deca-hero h2 {
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 3rem;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-}
-
-.deca-hero p {
-  font-style: italic;
-  opacity: 0.85;
-  font-size: 1.05rem;
-  max-width: 600px;
-}
-
-.giornate-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.8rem;
-  margin: 2rem 0;
-}
-
-.giornata-card {
-  background: var(--parchment);
-  border: 1px solid var(--border);
-  padding: 1rem;
-  text-align: center;
-  border-radius: 1px;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 1px 1px 4px var(--shadow);
-}
-
-.giornata-card:hover {
-  background: var(--gold-pale);
-  border-color: var(--gold-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px var(--shadow);
-}
-
-.giornata-num {
-  font-family: 'Cinzel', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.giornata-tema {
-  font-size: 0.72rem;
-  font-family: 'Cinzel', serif;
-  color: var(--ink-light);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.3;
-}
-
-.deca-two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin: 3rem 0;
-}
-
-.novella-highlight {
-  background: var(--ink);
-  color: var(--parchment);
-  padding: 2rem;
-  border-radius: 2px;
-  border-left: 4px solid var(--gold);
-  margin: 2rem 0;
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  position: relative;
-}
-
-.novella-highlight::before {
-  content: '"';
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 5rem;
-  color: var(--gold);
-  position: absolute;
-  top: -1.5rem; left: 1rem;
-  line-height: 1;
-  opacity: 0.3;
-}
-
-.novella-source {
-  display: block;
-  text-align: right;
-  font-style: normal;
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  color: var(--gold);
-  margin-top: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* ─── TABS ─── */
-.tab-nav {
-  display: flex;
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 2rem;
-  overflow-x: auto;
-}
-
-.tab-btn {
-  padding: 0.8rem 1.5rem;
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.tab-btn:hover { color: var(--gold); }
-.tab-btn.active {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-}
-
-.tab-pane { display: none; }
-.tab-pane.active { display: block; }
-
-/* ─── HIGHLIGHT ─── */
-.highlight {
-  background: var(--gold-pale);
-  border-left: 4px solid var(--gold);
-  border-right: 1px solid var(--border);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 1px;
-  font-size: 0.95rem;
-  color: var(--ink-light);
-  font-style: italic;
-}
 
 /* ─── MAPPA ─── */
 #mappa {
@@ -709,8 +244,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
   overflow: hidden;
   height: 520px;
   box-shadow: 0 0 0 2px #c8a030, 0 0 0 8px #6a4008, 0 0 0 10px #c8a030, 0 20px 60px rgba(0,0,0,0.8);
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
 }
 
 #pescaraMap {
@@ -777,6 +310,97 @@ nav a.nav-link:hover, nav a.nav-link.active {
   font-weight: 700;
 }
 
+/* ─── MODAL PER LE FOTO ─── */
+.pin-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pin-modal.active {
+  display: flex;
+}
+
+.pin-modal-content {
+  background: var(--parchment);
+  border: 5px solid var(--gold);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+  animation: slideIn 0.3s ease-out;
+}
+
+.pin-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--red-medieval);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.pin-modal-close:hover {
+  background: var(--red-light);
+  transform: scale(1.1);
+}
+
+.pin-modal-img {
+  width: 250px;
+  height: 250px;
+  border: 3px solid #8b6010;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--parchment) 0%, #c8b070 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.pin-modal-title {
+  font-family: 'UnifrakturMaguntia', 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.pin-modal-desc {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 #story-display {
   background: rgba(20,14,4,0.95);
   border: 2px solid var(--gold);
@@ -786,13 +410,6 @@ nav a.nav-link:hover, nav a.nav-link.active {
   color: var(--parchment);
   position: relative;
   box-shadow: inset 0 0 40px rgba(0,0,0,0.5);
-}
-
-#story-display::before {
-  content: '';
-  position: absolute; inset: 8px;
-  border: 1px solid rgba(184,130,10,0.15);
-  pointer-events: none;
 }
 
 #story-display h3 {
@@ -825,431 +442,79 @@ nav a.nav-link:hover, nav a.nav-link.active {
 .sn-btn:hover { background: var(--gold); color: var(--ink); }
 .sn-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-/* ─── CASINO ─── */
-#casino { background: linear-gradient(160deg, #080810 0%, #100820 40%, #180808 100%); }
-#casino .section-title { color: #f0d060; font-family: 'UnifrakturMaguntia', serif; }
-#casino .section-eyebrow { color: #c8a830; }
-
-.casino-board {
-  background: linear-gradient(160deg, #081408 0%, #0c1c0c 100%);
-  border: 3px solid #c8a830;
-  border-radius: 4px;
-  padding: 3rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 60px rgba(200,168,48,0.12), inset 0 0 60px rgba(0,0,0,0.5);
-}
-
-.casino-board::before {
-  content: '';
-  position: absolute; inset: 10px;
-  border: 1px solid rgba(200,168,48,0.18);
-  border-radius: 2px;
-  pointer-events: none;
-}
-
-.bet-area {
-  background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(200,168,48,0.25);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.bet-area h3 {
-  font-family: 'Cinzel', serif;
-  color: #f0d060;
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.bet-btns {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.bet-btn {
-  padding: 0.8rem 1.6rem;
-  border: 2px solid #c8a830;
-  background: rgba(200,168,48,0.08);
-  color: #f0d060;
-  font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.bet-btn:hover { background: rgba(200,168,48,0.2); transform: translateY(-2px); }
-.bet-btn.selected {
-  background: #c8a830;
-  color: #0a0800;
-  box-shadow: 0 0 20px rgba(200,168,48,0.4);
-}
-
-.dice-area {
-  display: flex; justify-content: center; gap: 3rem;
+/* ─── FORUM DELL'AMORE ─── */
+.love-forum-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.die {
-  width: 100px; height: 100px;
-  background: #fff;
-  border-radius: 12px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr);
-  padding: 12px;
-  gap: 4px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,255,255,0.5);
-  transition: transform 0.1s;
-}
-
-.die.rolling { animation: diceRoll 0.6s ease-out; }
-
-@keyframes diceRoll {
-  0%   { transform: rotate(0deg) scale(1); }
-  25%  { transform: rotate(90deg) scale(0.95); }
-  50%  { transform: rotate(180deg) scale(1.05); }
-  75%  { transform: rotate(270deg) scale(0.95); }
-  100% { transform: rotate(360deg) scale(1); }
-}
-
-.dot {
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: #1a0a0a;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
-  align-self: center;
-  justify-self: center;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.dot.visible { opacity: 1; }
-
-.roll-btn {
-  padding: 1rem 3rem;
-  background: linear-gradient(135deg, #c8a830, #f0d060, #c8a830);
-  color: #1a0a0a;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Cinzel', serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+.love-recipient {
+  background: var(--parchment);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
   cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 0 4px 20px rgba(200,168,48,0.4);
-  transition: all 0.2s;
+  transition: all 0.3s;
+  box-shadow: 2px 2px 10px var(--shadow);
 }
 
-.roll-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,168,48,0.5); }
-.roll-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.love-recipient:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(136, 115, 44, 0.4);
+  border-color: var(--gold-light);
+}
 
-.casino-result {
+.love-recipient-name {
   font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  min-height: 3rem;
-  margin: 1.5rem 0;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: 1.1rem;
+  color: var(--red-medieval);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.casino-result.win  { color: #60e080; text-shadow: 0 0 20px rgba(96,224,128,0.5); }
-.casino-result.lose { color: #e06060; text-shadow: 0 0 20px rgba(224,96,96,0.5); }
-.casino-result.neutral { color: #f0d060; }
-
-.casino-stats {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 1rem;
-  margin-top: 2rem;
+.love-recipient-desc {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  line-height: 1.5;
+  font-style: italic;
 }
 
-.c-stat {
-  background: rgba(200,168,48,0.07);
-  border: 1px solid rgba(200,168,48,0.18);
-  border-radius: 4px;
-  padding: 1rem;
+/* ─── GENERAL STYLES ─── */
+.tab-nav {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2rem;
+  overflow-x: auto;
 }
 
-.c-stat-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(200,168,48,0.7);
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.c-stat-val {
-  font-family: 'Cinzel', serif;
-  font-size: 1.4rem;
-  color: #f0d060;
-  font-weight: 700;
-}
-
-.history-list {
-  max-height: 180px;
-  overflow-y: auto;
-  margin-top: 1.5rem;
-  text-align: left;
-  padding: 1rem;
-  background: rgba(0,0,0,0.3);
-  border-radius: 4px;
-  border: 1px solid rgba(200,168,48,0.12);
-}
-
-.history-item {
+.tab-btn {
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
   font-family: 'Cinzel', serif;
   font-size: 0.78rem;
-  color: rgba(200,168,48,0.8);
-  padding: 0.25rem 0;
-  border-bottom: 1px solid rgba(200,168,48,0.07);
-}
-
-.history-label { font-weight: 700; color: #f0d060; }
-
-/* ─── FORUM AMORE ─── */
-#forum { background: linear-gradient(150deg, #120810 0%, #080810 50%, #100608 100%); }
-#forum .section-title { color: #f090c0; font-family: 'UnifrakturMaguntia', serif; }
-#forum .section-eyebrow { color: #c060a0; }
-
-.forum-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.forum-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(240,144,192,0.22);
-  border-radius: 2px;
-  padding: 2rem;
-  box-shadow: inset 0 0 30px rgba(240,144,192,0.02);
-}
-
-.forum-card h3 {
-  font-family: 'UnifrakturMaguntia', 'Cinzel', serif;
-  color: #f090c0;
-  margin-bottom: 0.5rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-.forum-card p.subtitle {
-  font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  color: rgba(240,144,192,0.55);
-  margin-bottom: 1.5rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.forum-input, .forum-select, .forum-textarea {
-  width: 100%;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(240,144,192,0.22);
-  border-radius: 1px;
-  color: #f0d0e0;
-  padding: 0.7rem 1rem;
-  font-family: 'EB Garamond', serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  transition: border-color 0.2s;
-  outline: none;
-}
-
-.forum-input:focus, .forum-select:focus, .forum-textarea:focus {
-  border-color: #f090c0;
-  background: rgba(240,144,192,0.07);
-}
-
-.forum-select option { background: #120810; }
-
-.forum-textarea {
-  resize: vertical;
-  min-height: 140px;
-  line-height: 1.6;
-}
-
-.forum-submit {
-  width: 100%;
-  padding: 0.9rem;
-  background: linear-gradient(135deg, #a03070, #e080b0, #a03070);
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.2s;
-  box-shadow: 0 4px 20px rgba(160,48,112,0.3);
-}
-
-.forum-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(160,48,112,0.4); }
-
-.letters-feed {
-  max-height: 500px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.letter-item {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(240,144,192,0.12);
-  border-left: 3px solid #f090c0;
-  border-radius: 1px;
-  padding: 1.2rem;
-  animation: fadeIn 0.4s ease;
-}
-
-.letter-meta {
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  color: rgba(240,144,192,0.55);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.letter-to {
-  font-family: 'Cinzel', serif;
-  color: #f090c0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.letter-body {
-  font-style: italic;
-  color: rgba(240,208,224,0.85);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-@keyframes fadeIn { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform:none; } }
-
-/* ─── FOOTER ─── */
-footer {
-  background: var(--ink);
-  color: var(--parchment);
-  text-align: center;
-  padding: 3rem 2rem;
-  border-top: 3px solid var(--gold);
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  opacity: 0.9;
-  position: relative;
-}
-
-footer::before {
-  content: '✦ ❧ ✦';
-  display: block;
-  font-size: 1rem;
-  color: var(--gold);
-  letter-spacing: 0.8em;
-  opacity: 0.4;
-  margin-bottom: 1rem;
-}
-
-footer .footer-title {
-  font-family: 'UnifrakturMaguntia', serif;
-  color: var(--gold-light);
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 768px) {
-  nav a.nav-link { padding: 0 0.5rem; font-size: 0.65rem; }
-  .vita-grid { grid-template-columns: 1fr; }
-  .vita-sidebar { position: static; }
-  .giornate-grid { grid-template-columns: repeat(2,1fr); }
-  .deca-two-col { grid-template-columns: 1fr; }
-  .casino-stats { grid-template-columns: 1fr 1fr; }
-  .forum-container { grid-template-columns: 1fr; }
-  .deca-hero { padding: 2rem; }
-  .deca-hero h2 { font-size: 2rem; }
-  .bet-btns { flex-direction: column; align-items: center; }
-  .map-container { height: 360px; }
-}
-
-/* ─── SCROLLBAR ─── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(26,14,4,0.2); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-
-/* ─── SHARED PROSE ─── */
-.section-prose p {
-  margin-bottom: 1rem;
   color: var(--ink-light);
-  text-align: justify;
-  hyphens: auto;
-}
-
-.section-prose h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  color: var(--red-medieval);
-  margin: 2rem 0 0.8rem;
-  border-left: 3px solid var(--gold);
-  padding-left: 1rem;
-  font-weight: 600;
-}
-
-.pin-img {
-  width: 130px !important; height: 130px !important; /* Riquadri delle immagini molto più grandi */
-  border: 4px solid #8b6010 !important;
-  border-radius: 4px;
-  background: var(--parchment);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 3.5rem !important; /* Icone o Emoji interne più grandi */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6), inset 0 0 15px rgba(184,130,10,0.3);
-  transition: all 0.3s;
-  overflow: hidden;
-  position: relative;
-}
-
-.pin-img img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
-
-.pin-label {
-  position: absolute;
-  bottom: -2rem;
-  left: 50%; transform: translateX(-50%);
-  font-family: 'Cinzel', serif;
-  font-size: 0.8rem !important; /* Leggermente più leggibile ma non gigante */
+  cursor: pointer;
+  transition: all 0.2s;
   white-space: nowrap;
-  color: #1a0e04;
-  background: rgba(212,184,112,0.95);
-  padding: 0.2rem 0.6rem !important;
-  border: 1px solid #8b6010;
-  border-radius: 1px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-weight: 700;
 }
+
+.tab-btn:hover { color: var(--gold); }
+.tab-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
 
 </style>
 </head>
@@ -1257,916 +522,276 @@ footer .footer-title {
 
 <!-- NAVIGATION -->
 <nav>
-  <a class="nav-brand" href="#hero">Boccaccio</a>
-  <a class="nav-link" href="#vita">Vita</a>
-  <a class="nav-link" href="#opere">Opere</a>
-  <a class="nav-link" href="#decamerone">Decamerone</a>
-  <a class="nav-link" href="#mappa">Mappa</a>
-  <a class="nav-link" href="#casino">Casinò</a>
-  <a class="nav-link" href="#forum">Forum Amore</a>
+  <a href="#" class="nav-brand">Boccaccio</a>
+  <a href="#mappa" class="nav-link active">Mappa</a>
+  <a href="#decamerone" class="nav-link">Decamerone</a>
+  <a href="#love-forum" class="nav-link">Forum</a>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-ornament">❧ Enciclopedia Letteraria ❧</div>
-  <h1>Giovanni<br>Boccaccio</h1>
-  <h2>Padre della prosa italiana</h2>
-  <div class="hero-dates">Certaldo · 1313 — 1375</div>
-  <div class="hero-nav-pills">
-    <a class="hero-pill" href="#vita">La Vita</a>
-    <a class="hero-pill" href="#opere">Le Opere</a>
-    <a class="hero-pill" href="#decamerone">Il Decamerone</a>
-    <a class="hero-pill" href="#mappa">🗺 Mappa Pescara</a>
-    <a class="hero-pill" href="#casino">🎲 Casinò</a>
-    <a class="hero-pill" href="#forum">💌 Forum Amore</a>
-  </div>
-</section>
-
-<!-- VITA -->
-<section class="section" id="vita">
+<!-- MAPPA SECTION -->
+<section id="mappa" class="section">
   <div class="container">
     <div class="section-header">
-      <span class="section-eyebrow">Biografia</span>
-      <h2 class="section-title">La Vita di Boccaccio</h2>
-      <div class="section-divider"></div>
+      <span class="section-eyebrow">Mondo di Boccaccio</span>
+      <h2 class="section-title">I Luoghi delle Storie</h2>
     </div>
-
-    <div class="vita-grid">
-        <div class="vita-sidebar">
-        <div class="vita-portrait">
-          <img src="boccaccio.png" alt="Ritratto di Giovanni Boccaccio" onerror="this.onerror=null; this.parentNode.innerHTML='📜';">
-        </div>
-        <div class="info-box">
-          <h4>Dati Biografici</h4>
-          <div class="info-row"><span class="info-label">Nato</span><span>1313, Certaldo o Firenze</span></div>
-          <div class="info-row"><span class="info-label">Morto</span><span>21 dicembre 1375, Certaldo</span></div>
-          <div class="info-row"><span class="info-label">Padre</span><span>Boccaccino di Chelino (mercante)</span></div>
-          <div class="info-row"><span class="info-label">Lingua</span><span>Volgare fiorentino, Latino</span></div>
-          <div class="info-row"><span class="info-label">Periodo</span><span>Umanesimo, Trecento</span></div>
-          <div class="info-row"><span class="info-label">Generi</span><span>Novella, Romanzo, Poesia, Trattato</span></div>
-          <div class="info-row"><span class="info-label">Amico di</span><span>Francesco Petrarca</span></div>
-        </div>
-      </div>
-
-      <div class="vita-content">
-        <h3>Origini e Giovinezza</h3>
-        <p>Giovanni Boccaccio nacque nel 1313, figlio illegittimo di Boccaccino di Chelino, un agiato mercante fiorentino al servizio della potente compagnia bancaria dei Bardi. Le circostanze esatte della nascita rimangono incerte: alcune fonti indicano Certaldo come luogo natale, altre Firenze. La madre era probabilmente una donna francese conosciuta a Parigi durante i viaggi d'affari del padre.</p>
-        <p>Il padre lo riconobbe e si occupò della sua educazione, portandolo a Napoli nel 1327 per farlo formare come mercante e banchiere presso la filiale napoletana dei Bardi. Napoli, in quel periodo capitale del vivace regno angioino, si rivelò una città cosmopolita e culturalmente stimolante, molto diversa dalla sobria Firenze mercantile.</p>
-
-        <h3>Gli Anni Napoletani (1327–1340)</h3>
-        <p>Il soggiorno napoletano fu fondamentale per la formazione culturale e letteraria di Boccaccio. Abbandonato presto il commercio, si dedicò agli studi giuridici presso l'università e poi alla letteratura, frequentando la corte di Roberto d'Angiò. Qui entrò in contatto con un ambiente intellettuale raffinato, ricco di poeti, filosofi, teologi e scienziati.</p>
-        <p>Fu a Napoli che si innamorò di Maria d'Aquino, figlia naturale del re, che il poeta idealizzò con il nome di Fiammetta. Questa passione, reale o letteraria che fosse, ispirò molte delle sue prime opere giovanili. Il Filostrato, il Filocolo e il Teseida nacquero proprio in questo periodo di fervore creativo partenopeo.</p>
-
-        <h3>Il Ritorno a Firenze e la Maturità</h3>
-        <p>Nel 1340 la crisi finanziaria della compagnia dei Bardi costrinse Boccaccio a tornare a Firenze. L'impatto fu duro: la città sembrava provinciale dopo la magnificenza napoletana. Tuttavia fu proprio in questi anni che compose le sue opere maggiori, tra cui il capolavoro assoluto: il Decamerone, scritto tra il 1348 e il 1351 all'indomani della devastante pestilenza del 1348, che uccise metà della popolazione fiorentina.</p>
-        <p>Nel 1350 incontrò Petrarca, che divenne il suo mentore e amico più caro. Da quel momento Boccaccio si dedicò sempre più agli studi umanistici in latino: recupero di manoscritti classici, filologia, mitologia, geografia medievale. Divenne ambasciatore della Repubblica fiorentina in numerose missioni diplomatiche.</p>
-
-        <h3>Gli Ultimi Anni e la Morte</h3>
-        <p>Negli ultimi anni Boccaccio fu tormentato da crisi spirituali. Nel 1362 un frate certosino, tale Fra Gioacchino Ciani, gli predisse una morte imminente se non avesse abbandonato i suoi scritti frivoli. Boccaccio, scosso, pensò persino di bruciare il Decamerone, ma fu Petrarca a dissuaderlo.</p>
-        <p>Si ritirò progressivamente a Certaldo, dove visse in povertà volontaria, continuando però a comporre opere latine erudite. Morì il 21 dicembre 1375, poco più di un anno dopo il suo amico Petrarca, ponendo fine alla grande triade dei padri della letteratura italiana: Dante, Petrarca, Boccaccio.</p>
-
-        <h3>Cronologia</h3>
-        <div class="timeline">
-          <div class="tl-item"><span class="tl-year">1313</span><div class="tl-dot"></div><span class="tl-text">Nascita, probabilmente a Certaldo o Firenze</span></div>
-          <div class="tl-item"><span class="tl-year">1327</span><div class="tl-dot"></div><span class="tl-text">Si trasferisce a Napoli con il padre per apprendere il commercio</span></div>
-          <div class="tl-item"><span class="tl-year">c.1336</span><div class="tl-dot"></div><span class="tl-text">Compone il Filostrato, primo grande poema narrativo</span></div>
-          <div class="tl-item"><span class="tl-year">1340</span><div class="tl-dot"></div><span class="tl-text">Ritorno forzato a Firenze per la crisi finanziaria dei Bardi</span></div>
-          <div class="tl-item"><span class="tl-year">1348</span><div class="tl-dot"></div><span class="tl-text">La grande pestilenza devasta Firenze: inizia a scrivere il Decamerone</span></div>
-          <div class="tl-item"><span class="tl-year">1350</span><div class="tl-dot"></div><span class="tl-text">Primo incontro con Petrarca; nascita di un'amicizia indissolubile</span></div>
-          <div class="tl-item"><span class="tl-year">1351</span><div class="tl-dot"></div><span class="tl-text">Completamento del Decamerone; missione diplomatica a Petrarca</span></div>
-          <div class="tl-item"><span class="tl-year">1362</span><div class="tl-dot"></div><span class="tl-text">Crisi spirituale; Petrarca lo persuade a non distruggere le sue opere</span></div>
-          <div class="tl-item"><span class="tl-year">c.1370</span><div class="tl-dot"></div><span class="tl-text">Primo copista del manoscritto di Dante; si ritira a Certaldo</span></div>
-          <div class="tl-item"><span class="tl-year">1375</span><div class="tl-dot"></div><span class="tl-text">Muore a Certaldo il 21 dicembre</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OPERE -->
-<section class="section" id="opere">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">Produzione Letteraria</span>
-      <h2 class="section-title">Le Opere di Boccaccio</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="opere-filter">
-      <button class="filter-btn active" data-filter="all">Tutte</button>
-      <button class="filter-btn" data-filter="poema">Poema</button>
-      <button class="filter-btn" data-filter="prosa">Prosa</button>
-      <button class="filter-btn" data-filter="trattato">Trattato</button>
-      <button class="filter-btn" data-filter="latino">Latina</button>
-    </div>
-
-    <div class="opere-grid" id="operGrid">
-      <div class="opera-card" data-type="prosa">
-        <div class="opera-year">c. 1336–1338</div>
-        <div class="opera-title">Filocolo</div>
-        <span class="opera-type">Romanzo in Prosa</span>
-        <div class="opera-desc">Primo grande romanzo in prosa italiana. Rielabora la storia d'amore tra Florio e Biancifiore, di origine francese medievale. Opera di grande respiro (cinque libri), ricca di episodi e digressioni liriche.</div>
-      </div>
-      <div class="opera-card" data-type="poema">
-        <div class="opera-year">c. 1335–1336</div>
-        <div class="opera-title">Filostrato</div>
-        <span class="opera-type">Poema in Ottave</span>
-        <div class="opera-desc">Poema che narra l'amore di Troiolo per Criseida durante la guerra di Troia. Prima grande prova nell'ottava rima, la strofa che poi diventerà il metro epico per eccellenza della letteratura italiana.</div>
-      </div>
-      <div class="opera-card" data-type="poema">
-        <div class="opera-year">c. 1339–1341</div>
-        <div class="opera-title">Teseida delle Nozze di Emilia</div>
-        <span class="opera-type">Poema Epico-Cavalleresco</span>
-        <div class="opera-desc">Primo poema epico in volgare della letteratura italiana. Narra le imprese di Teseo e la contesa tra Arcita e Palemone per l'amore di Emilia. Dodici libri modellati sull'Eneide virgiliana.</div>
-      </div>
-      <div class="opera-card" data-type="prosa">
-        <div class="opera-year">c. 1341–1342</div>
-        <div class="opera-title">Comedia delle Ninfe Fiorentine</div>
-        <span class="opera-type">Prosa con Inserti Poetici</span>
-        <div class="opera-desc">Opera allegorico-pastorale in prosa con inserti in terzine dantesche. Il pastore Ameto si innamora di sette ninfe che rappresentano le virtù teologali e cardinali.</div>
-      </div>
-      <div class="opera-card" data-type="prosa">
-        <div class="opera-year">c. 1342–1343</div>
-        <div class="opera-title">Amorosa Visione</div>
-        <span class="opera-type">Poema Allegorico</span>
-        <div class="opera-desc">Poema in terzine di ispirazione dantesca (cinquanta canti). Una guida accompagna il narratore attraverso un trionfo allegorico della Gloria, della Ricchezza, dell'Amore, della Fortuna e poi della Morte.</div>
-      </div>
-      <div class="opera-card" data-type="prosa">
-        <div class="opera-year">c. 1343–1344</div>
-        <div class="opera-title">Elegia di Madonna Fiammetta</div>
-        <span class="opera-type">Romanzo Psicologico</span>
-        <div class="opera-desc">Considerato il primo romanzo psicologico moderno. Una nobildonna napoletana narra in prima persona la propria storia d'amore e abbandono. Voce narrante femminile rivoluzionaria per l'epoca.</div>
-      </div>
-      <div class="opera-card" data-type="prosa">
-        <div class="opera-year">c. 1346</div>
-        <div class="opera-title">Ninfale Fiesolano</div>
-        <span class="opera-type">Poemetto Mitologico</span>
-        <div class="opera-desc">Racconta la storia d'amore tra Africo e la ninfa Diana Mensola, sullo sfondo delle colline fiorentine di Fiesole. Opera di grazia assoluta, con una commistione magistrale di mito classico e paesaggio toscano.</div>
-      </div>
-      <div class="opera-card" data-type="prosa" style="border-top-color: var(--red-medieval);">
-        <div class="opera-year">1348–1351</div>
-        <div class="opera-title" style="color: var(--red-medieval);">Decamerone</div>
-        <span class="opera-type" style="background:rgba(122,10,10,0.15); color:var(--red-medieval);">Capolavoro • Novelle</span>
-        <div class="opera-desc">Cento novelle narrate da sette donne e tre giovani durante la fuga dalla peste di Firenze del 1348. Opera fondativa della narrativa occidentale moderna. <em>→ Sezione dedicata</em></div>
-      </div>
-      <div class="opera-card" data-type="latino">
-        <div class="opera-year">c. 1355–1374</div>
-        <div class="opera-title">De Mulieribus Claris</div>
-        <span class="opera-type">Opera Latina</span>
-        <div class="opera-desc">Prima raccolta biografica della letteratura occidentale dedicata esclusivamente alle donne. Centosei biografie di donne illustri dal mondo antico. Prima opera umanistica dedicata interamente al femminile.</div>
-      </div>
-      <div class="opera-card" data-type="latino">
-        <div class="opera-year">c. 1356–1362</div>
-        <div class="opera-title">De Casibus Virorum Illustrium</div>
-        <span class="opera-type">Opera Latina</span>
-        <div class="opera-desc">Nove libri che narrano le cadute di personaggi illustri dall'antichità al Medioevo, sottolineando la volubilità della Fortuna. Opera fondamentale per la diffusione europea della cultura umanistica.</div>
-      </div>
-      <div class="opera-card" data-type="trattato">
-        <div class="opera-year">c. 1360–1374</div>
-        <div class="opera-title">Genealogie Deorum Gentilium</div>
-        <span class="opera-type">Trattato Mitologico</span>
-        <div class="opera-desc">Enciclopedia mitologica in quindici libri. La più ambiziosa raccolta di mitologia classica del Medioevo. Gli ultimi due libri contengono una celebre difesa della poesia e del lavoro letterario.</div>
-      </div>
-      <div class="opera-card" data-type="trattato">
-        <div class="opera-year">1351–1373</div>
-        <div class="opera-title">Trattatello in Laude di Dante</div>
-        <span class="opera-type">Biografia Critica</span>
-        <div class="opera-desc">Prima biografia di Dante Alighieri. Boccaccio fu il primo a tenere letture pubbliche della Commedia a Firenze (1373) e a definire il poema "Divina". Tre redazioni testimoniano la lunga elaborazione.</div>
-      </div>
-      <div class="opera-card" data-type="poema">
-        <div class="opera-year">c. 1365–1374</div>
-        <div class="opera-title">Corbaccio</div>
-        <span class="opera-type">Satira in Prosa</span>
-        <div class="opera-desc">Violenta satira misogina, unica nel corpus boccaccesco per il suo tono aggressivo. Un'anima in pena appare al narratore e lo distoglie da un amore degradante attraverso una feroce requisitoria contro una vedova.</div>
-      </div>
-      <div class="opera-card" data-type="latino">
-        <div class="opera-year">1367–1374</div>
-        <div class="opera-title">Esposizioni sopra la Comedia</div>
-        <span class="opera-type">Commento Dantesco</span>
-        <div class="opera-desc">Commento alle prime diciassette canti dell'Inferno, rimasto incompiuto. Trascrizione delle lezioni pubbliche tenute a Firenze su mandato del Comune. Fondamentale per la storia degli studi danteschi.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DECAMERONE (approfondito) -->
-<section class="section" id="decamerone">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">Approfondimento</span>
-      <h2 class="section-title">Il Decamerone</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="deca-hero">
-      <h2>Decameron</h2>
-      <p>Cento novelle in dieci giornate — Il capolavoro della letteratura italiana medievale e l'atto fondativo della narrativa occidentale moderna</p>
-      <br>
-      <div style="display:flex; gap:2rem; flex-wrap:wrap;">
-        <span style="font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(184,130,10,0.8);">📅 1348–1351</span>
-        <span style="font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(184,130,10,0.8);">📖 100 Novelle</span>
-        <span style="font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(184,130,10,0.8);">👥 10 Narratori</span>
-        <span style="font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(184,130,10,0.8);">🏛 Volgare Fiorentino</span>
-      </div>
-    </div>
-
-    <div class="tab-nav">
-      <button class="tab-btn active" data-tab="struttura">Struttura</button>
-      <button class="tab-btn" data-tab="contesto">Contesto Storico</button>
-      <button class="tab-btn" data-tab="giornate">Le Dieci Giornate</button>
-      <button class="tab-btn" data-tab="personaggi">I Narratori</button>
-      <button class="tab-btn" data-tab="temi">Temi & Poetica</button>
-      <button class="tab-btn" data-tab="novelle">Novelle Celebri</button>
-      <button class="tab-btn" data-tab="lingua">La Lingua</button>
-      <button class="tab-btn" data-tab="fortuna">Fortuna</button>
-    </div>
-
-    <!-- TAB: STRUTTURA -->
-    <div class="tab-pane active" id="tab-struttura">
-      <div class="deca-two-col">
-        <div>
-          <h3 style="font-family:'Cinzel',serif; color:var(--red-medieval); font-size:1.2rem; margin-bottom:1rem;">La Cornice</h3>
-          <p style="color:var(--ink-light); margin-bottom:1rem;">Il Decamerone è costruito su una struttura a cornice che anticipa tecniche narrative modernissime. Nel 1348, durante la devastante epidemia di peste bubbonica che dimezzò la popolazione europea, un gruppo di dieci giovani — sette donne e tre uomini — si rifugia in una villa fuori Firenze per sfuggire al contagio.</p>
-          <p style="color:var(--ink-light); margin-bottom:1rem;">Per animare le loro giornate, decidono di raccontare novelle: ogni giorno ciascuno ne narra una, sotto la guida di un "re" o "regina" che viene eletto a turno e propone il tema della giornata. In dieci giornate (da cui il nome greco <em>deca hemeron</em> = "dieci giorni") vengono così raccontate cento novelle.</p>
-          <div class="highlight">Il titolo completo originale è <em>"Libro chiamato Decameron cognominato Prencipe Galeotto"</em> — il sottotitolo richiama Galeotto, il personaggio mediatore nell'amore di Lancillotto e Ginevra, come nel celebre episodio dantesco del Canto V dell'Inferno.</div>
-          <p style="color:var(--ink-light); margin-bottom:1rem;">La struttura a cornice non è solo un espediente formale: essa crea un doppio livello narrativo (l'autore che narra i narratori che narrano) che conferisce all'opera una modernità sorprendente. Boccaccio può così moltiplicare le prospettive, relativizzare i valori, e lasciare al lettore la libertà di giudicare.</p>
-        </div>
-        <div>
-          <h3 style="font-family:'Cinzel',serif; color:var(--red-medieval); font-size:1.2rem; margin-bottom:1rem;">Numeri e Simmetria</h3>
-          <div style="background:var(--parchment); border:1px solid var(--border); padding:1.5rem; border-radius:2px;">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; font-size:0.88rem;">
-              <div style="text-align:center; padding:1rem; background:rgba(184,130,10,0.08); border-radius:2px;">
-                <div style="font-family:'Cinzel',serif; font-size:2rem; color:var(--gold); font-weight:700;">100</div>
-                <div style="font-family:'Cinzel',serif; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-light);">Novelle totali</div>
-              </div>
-              <div style="text-align:center; padding:1rem; background:rgba(184,130,10,0.08); border-radius:2px;">
-                <div style="font-family:'Cinzel',serif; font-size:2rem; color:var(--gold); font-weight:700;">10</div>
-                <div style="font-family:'Cinzel',serif; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-light);">Giornate narrate</div>
-              </div>
-              <div style="text-align:center; padding:1rem; background:rgba(184,130,10,0.08); border-radius:2px;">
-                <div style="font-family:'Cinzel',serif; font-size:2rem; color:var(--gold); font-weight:700;">7</div>
-                <div style="font-family:'Cinzel',serif; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-light);">Donne narranti</div>
-              </div>
-              <div style="text-align:center; padding:1rem; background:rgba(184,130,10,0.08); border-radius:2px;">
-                <div style="font-family:'Cinzel',serif; font-size:2rem; color:var(--gold); font-weight:700;">3</div>
-                <div style="font-family:'Cinzel',serif; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-light);">Uomini narranti</div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <p style="font-size:0.9rem; color:var(--ink-light);">La struttura numerica non è casuale: cento novelle richiamano la perfezione del numero (10×10), in risposta implicita ai cento canti della Commedia dantesca. Boccaccio costruisce così la sua "Commedia Umana" in contrapposizione alla "Commedia Divina". La proporzione 7:3 tra donne e uomini è anch'essa simbolica, richiamando le virtù teologali (3) e cardinali (4).</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB: CONTESTO -->
-    <div class="tab-pane" id="tab-contesto">
-      <div class="section-prose">
-        <h3>La Peste del 1348</h3>
-        <p>Il Decamerone nasce direttamente dall'esperienza traumatica della grande pestilenza bubbonica del 1348. L'epidemia, arrivata dalla Cina attraverso le rotte commerciali genovesi, si abbatté sull'Europa come uno tsunami demografico, uccidendo tra un terzo e metà della popolazione del continente. Firenze fu colpita con particolare violenza: si stima che morissero tra 50.000 e 60.000 persone.</p>
-        <div class="novella-highlight">
-          Lasciamo stare il contado e torniamo alla città. Dico adunque che, tanta era la crudeltà del cielo... che niuno d'essi poteva scampare per industria d'uomo alcuno né per provedimento di persona.
-          <span class="novella-source">— Boccaccio, Proemio del Decamerone</span>
-        </div>
-        <p>La prosa del Proemio, con cui Boccaccio descrive la peste a Firenze, è uno dei più straordinari documenti della letteratura universale. Con freddezza quasi giornalistica, l'autore descrive la dissoluzione dei legami sociali, familiari, religiosi: i padri che abbandonano i figli, i preti che rifiutano i sacramenti, le fosse comuni aperte ai bordi delle strade.</p>
-        <h3>La Risposta Estetica alla Morte</h3>
-        <p>La brigata di narratori che si rifugia in villa rappresenta una risposta estetica al caos della morte: la bellezza dell'arte e della narrazione come argine contro la barbarie, come restauro dell'ordine umano contro il disordine biologico. Il Decamerone è, tra le altre cose, un monumento alla resistenza della civiltà.</p>
-        <p>Il contesto storico spiega anche la varietà tematica dell'opera: in un momento in cui la morte ha livellato ogni distinzione di classe, Boccaccio può dare voce a mercanti, artigiani, nobili, preti corrotti, contadini furbi. La peste ha abolito la gerarchia; la narrativa di Boccaccio la rispecchia liberamente.</p>
-        <h3>Il Medioevo e l'Umanesimo</h3>
-        <p>Il Decamerone si colloca in un momento cruciale di transizione: Boccaccio è ancora medievale per molti aspetti (la fede, la visione della Fortuna, l'allegorismo) ma già profondamente umanistico per altri (la centralità dell'uomo, la dignità del corpo, la rivalutazione del presente). È questa ambiguità produttiva che rende l'opera inesauribile.</p>
-      </div>
-    </div>
-
-    <!-- TAB: GIORNATE -->
-    <div class="tab-pane" id="tab-giornate">
-      <p style="margin-bottom:1.5rem; color:var(--ink-light);">Ogni giornata ha un tema prestabilito (eccetto la prima e la nona, libere) proposto dal re o dalla regina di giornata. Clicca su una giornata per saperne di più.</p>
-      <div class="giornate-grid" id="giornateGrid">
-        <div class="giornata-card" onclick="showGiornata(1)"><span class="giornata-num">I</span><span class="giornata-tema">Tema Libero</span></div>
-        <div class="giornata-card" onclick="showGiornata(2)"><span class="giornata-num">II</span><span class="giornata-tema">Chi riesce a salvarsi</span></div>
-        <div class="giornata-card" onclick="showGiornata(3)"><span class="giornata-num">III</span><span class="giornata-tema">Chi ottiene ciò che desidera</span></div>
-        <div class="giornata-card" onclick="showGiornata(4)"><span class="giornata-num">IV</span><span class="giornata-tema">Amori con esito infelice</span></div>
-        <div class="giornata-card" onclick="showGiornata(5)"><span class="giornata-num">V</span><span class="giornata-tema">Amori con lieto fine</span></div>
-        <div class="giornata-card" onclick="showGiornata(6)"><span class="giornata-num">VI</span><span class="giornata-tema">L'arguzia e il motto</span></div>
-        <div class="giornata-card" onclick="showGiornata(7)"><span class="giornata-num">VII</span><span class="giornata-tema">Beffe delle mogli</span></div>
-        <div class="giornata-card" onclick="showGiornata(8)"><span class="giornata-num">VIII</span><span class="giornata-tema">Beffe reciproche</span></div>
-        <div class="giornata-card" onclick="showGiornata(9)"><span class="giornata-num">IX</span><span class="giornata-tema">Tema Libero</span></div>
-        <div class="giornata-card" onclick="showGiornata(10)"><span class="giornata-num">X</span><span class="giornata-tema">Liberalità e magnificenza</span></div>
-      </div>
-      <div id="giornataDetail" style="display:none; background:var(--parchment); border:1px solid var(--border-strong); padding:1.5rem; border-radius:2px; margin-top:1rem;"></div>
-    </div>
-
-    <!-- TAB: PERSONAGGI -->
-    <div class="tab-pane" id="tab-personaggi">
-      <div class="section-prose">
-        <h3>Le Sette Donne</h3>
-        <p>Le sette giovani donne si rifugiano nella chiesa di Santa Maria Novella dove incontrano i tre uomini. Tutte sono nobili, colte, tra i diciotto e i ventotto anni. Boccaccio le descrive con cura psicologica: <strong>Pampinea</strong> è la più anziana e autorevole, ideatrice della fuga; <strong>Fiammetta</strong> è la più vivace e ironica; <strong>Filomena</strong> la più saggia; <strong>Emilia</strong> la più orgogliosa; <strong>Lauretta</strong> la più dolce; <strong>Neifile</strong> e <strong>Elissa</strong> completano il gruppo.</p>
-        <p>Molti critici hanno visto in Fiammetta un alter ego dell'amata napoletana di Boccaccio, Maria d'Aquino. I nomi sono tutti simbolici e di derivazione letteraria.</p>
-        <h3>I Tre Giovani</h3>
-        <p><strong>Panfilo</strong>, <strong>Filostrato</strong> e <strong>Dioneo</strong> sono i tre uomini del gruppo. Dioneo è il più interessante: ottiene dalla brigata il privilegio di narrare sempre per ultimo e di poter scegliere liberamente l'argomento, indipendentemente dal tema della giornata. Questo lo rende una voce irregolare, spesso licenziosa, che funziona come valvola di sfogo e come elemento di rottura della simmetria.</p>
-        <h3>L'Autore come Personaggio</h3>
-        <p>Boccaccio non è solo l'autore esterno: interviene con un Proemio, con un'introduzione alle quattro giornate centrali e con una Conclusione in cui difende apertamente la propria opera dalle critiche moraleggianti. Questo sdoppiamento tra autore e narratori è uno dei tratti più moderni del Decamerone.</p>
-      </div>
-    </div>
-
-    <!-- TAB: TEMI -->
-    <div class="tab-pane" id="tab-temi">
-      <div class="section-prose">
-        <h3>Fortuna, Natura, Ingegno</h3>
-        <p>I tre motori narrativi del Decamerone sono la Fortuna (forza cieca e imprevedibile), la Natura (gli istinti umani, specialmente quello amoroso) e l'Ingegno (l'intelligenza che permette all'uomo di adattarsi e sopravvivere). Questi tre poli sono spesso in conflitto: il protagonista di successo è chi sa usare l'ingegno per governare la fortuna e assecondare la natura.</p>
-        <h3>L'Amore</h3>
-        <p>L'amore nel Decamerone è raramente idealizzato: è spesso fisico, comico, tragico, adultero. Boccaccio ne celebra la potenza come forza naturale che supera ogni convenzione sociale e morale. Le novelle della IV giornata mostrano l'amore come forza tragica; quelle della V come forza vincente; le novelle di Dioneo come forza comica e liberatoria.</p>
-        <h3>La Satira Anticlericale</h3>
-        <p>Il clero è uno dei bersagli preferiti di Boccaccio. Monaci libidinosi, abati avidi, preti ignoranti popolano molte novelle. La prima novella (Ser Ciappelletto, un delinquente che muore falsamente santificato) è il manifesto di questo atteggiamento: la fede non è abolita, ma la sua gestione istituzionale è corrotta.</p>
-        <h3>La Dignità della Borghesia</h3>
-        <p>Per la prima volta nella letteratura italiana, i mercanti fiorentini diventano protagonisti di storie eroiche e non solo comiche. L'ingegno pratico del mercante — saper leggere le situazioni, adattarsi, sfruttare le opportunità — viene celebrato con lo stesso rispetto dell'eroismo cavalleresco o della contemplazione monastica.</p>
-      </div>
-    </div>
-
-    <!-- TAB: NOVELLE CELEBRI -->
-    <div class="tab-pane" id="tab-novelle">
-      <div class="section-prose">
-        <h3>Ser Ciappelletto (I, 1)</h3>
-        <p>Il peggiore uomo del mondo, notaio falsario e assassino, sul letto di morte inganna il confessore e viene venerato come santo. La novella inaugurale è un manifesto della relatività dei valori: la santità può nascere dall'inganno, il culto popolare è costruito sull'illusione. Boccaccio però non smentisce Dio, solo il giudizio umano.</p>
-        <h3>Andreuccio da Perugia (II, 5)</h3>
-        <p>Un giovane mercante di Perugia arriva a Napoli per comprare cavalli e nel giro di una notte perde tutti i suoi soldi, cade in una latrina, viene rinchiuso in una tomba. Ma alla fine riesce a tornare a casa con un rubino preziosissimo trovato nel sepolcro. Un romanzo d'avventura in miniatura.</p>
-        <h3>Ghismonda e Tancredi (IV, 1)</h3>
-        <p>Una delle più belle e tragiche novelle. Ghismonda, figlia del principe di Salerno, si innamora del servo Guiscardo. Il padre, scoperta la relazione, uccide l'amante e manda alla figlia il cuore in una coppa d'oro. Ghismonda lo bacia, vi versa sopra un veleno, e muore. La novella è un inno alla dignità dell'amore contro la tirannia paterna.</p>
-        <h3>Federigo degli Alberighi (V, 9)</h3>
-        <p>Un nobile fiorentino, per amore di Monna Giovanna, spende tutto il suo patrimonio. Ridotto in povertà, possiede solo un nobilissimo falcone. Quando la donna viene a trovarlo, Federigo, non avendo nient'altro da offrirle, sacrifica il falcone per cucinarlo. Il gesto di generosità commuove la donna, che lo sposa. La novella del falcone è il canone della liberalità medievale.</p>
-        <h3>Calandrino e l'Elitropia (VIII, 3)</h3>
-        <p>Bruno e Buffalmacco convincono il credulone pittore Calandrino di aver trovato una pietra magica che lo rende invisibile. Calandrino cammina per Firenze credendosi invisibile mentre tutti lo vedono e ridono. Uno dei cicli comici più geniali dell'opera, ispiratore della commedia dell'arte.</p>
-        <h3>Griselda (X, 10)</h3>
-        <p>L'ultima novella dell'opera è anche la più controversa. Gualtieri sposa la contadina Griselda ma la sottopone a prove atroci per verificarne la fedeltà: le toglie i figli (facendole credere di averli uccisi), la ripudia, la riprende. Griselda sopporta tutto. La novella è insieme elogio della pazienza e critica della tirannide coniugale.</p>
-      </div>
-    </div>
-
-    <!-- TAB: LINGUA -->
-    <div class="tab-pane" id="tab-lingua">
-      <div class="section-prose">
-        <h3>Il Volgare Fiorentino come Lingua Letteraria</h3>
-        <p>Uno dei contributi fondamentali del Decamerone alla cultura italiana è la consacrazione del volgare fiorentino come lingua letteraria di alto rango. Prima di Boccaccio, il volgare era considerato adatto solo a certi generi: la poesia lirica (Dante, Petrarca), la narrativa breve, la letteratura popolare. Con il Decamerone, il volgare conquista la prosa lunga e complessa.</p>
-        <h3>La Prosa Periodica</h3>
-        <p>Lo stile di Boccaccio è caratterizzato da periodi lunghi e articolati, con subordinate agganciate in sequenza, sul modello della prosa latina ciceroniana. Questo "stile ampio" contrasta con la brevità incisiva delle novelle medievali precedenti (come quelle del Novellino) ed eleva la narrativa in prosa a un livello di dignità mai raggiunto prima.</p>
-        <h3>La Varietà Stilistica</h3>
-        <p>Nonostante la tendenza alla periodicità classica, Boccaccio sa adattare il registro al contenuto: le novelle tragiche della IV giornata hanno un tono elevato e patetico; le novelle comiche usano espressioni popolaresche e dialettali; le novelle della VI giornata celebrano la brevità arguta del motto. Questa flessibilità stilistica è una delle grandezze tecniche dell'opera.</p>
-        <h3>L'Influenza sulla Prosa Italiana</h3>
-        <p>Per secoli, la prosa di Boccaccio fu il modello assoluto per gli scrittori italiani. Pietro Bembo nel Cinquecento la indicò come norma da imitare, insieme alla poesia di Petrarca. Questa "questione della lingua" condizionò la letteratura italiana fino all'Ottocento, quando Manzoni scelse invece il fiorentino parlato contemporaneo come modello per i Promessi Sposi.</p>
-      </div>
-    </div>
-
-    <!-- TAB: FORTUNA -->
-    <div class="tab-pane" id="tab-fortuna">
-      <div class="deca-two-col">
-        <div class="section-prose">
-          <h3>La Tradizione Letteraria</h3>
-          <p>Il Decamerone è, insieme alla Divina Commedia e al Canzoniere, uno dei testi fondativi della letteratura italiana. La sua influenza sulla narrativa europea è incalcolabile. Geoffrey Chaucer nei Canterbury Tales (1390) ne adotta direttamente la struttura a cornice e alcune novelle. Shakespeare si ispira a Boccaccio per <em>Tutto è bene quel che finisce bene</em> e per il <em>Cimbelino</em>.</p>
-          <p>Marguerite de Navarre nel suo <em>Heptaméron</em> (1558) riprende direttamente il modello. Lope de Vega, La Fontaine, Molière, Keats, Tennyson, Thomas Mann, Pier Paolo Pasolini: l'elenco degli autori influenzati o ispirati sarebbe interminabile.</p>
-        </div>
-        <div class="section-prose">
-          <h3>Cinema e Arte</h3>
-          <p>Pier Paolo Pasolini nel 1971 girò il film <em>Il Decamerone</em>, primo capitolo della "Trilogia della vita", con se stesso nel ruolo dell'allievo di Giotto. Il film è un tributo alla vitalità corporea e alla cultura popolare medievale.</p>
-          <p>Nelle arti figurative, Sandro Botticelli illustrò alcune novelle del Decamerone. John William Waterhouse nel XIX secolo realizzò celebri dipinti ispirati a Boccaccio. La storia di Nastagione degli Onesti (V,8) fu illustrata da Botticelli in un ciclo di pannelli oggi al Prado.</p>
-          <div class="highlight">Il Decamerone fu uno dei primissimi testi stampati a stampa e tra i libri più diffusi nei primi secoli della tipografia a caratteri mobili.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- MAPPA PESCARA — MANOSCRITTO MEDIEVALE -->
-<section class="section" id="mappa" style="padding:6rem 0;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-eyebrow">Storie Interattive</span>
-      <h2 class="section-title" style="color:var(--gold-light);">La Mappa di Pescara</h2>
-      <div class="section-divider"></div>
-      <p style="color:rgba(184,130,10,0.7); font-family:'Cinzel',serif; margin-top:1rem; font-size:0.85rem; letter-spacing:0.05em;">Clicca sulle immagini nella mappa per scoprire le storie</p>
-    </div>
-
-    <!-- MAP CONTAINER with clickable pins -->
+    
     <div class="map-outer">
-      <div class="map-container" id="mapContainer">
-        <!-- Slot per inserire la vostra immagine della mappa:
-             - Copiate il file immagine nella cartella 'images/' (o nella stessa cartella di questo HTML)
-             - Sostituite 'images/your-map.png' con il nome del vostro file
-             I pin mantengono le posizioni attuali in percentuale e verranno sovrapposti all'immagine. -->
-        <img id="pescaraMap" src="mappapescara.png" alt="Mappa di Pescara"
-             style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
-
-        <!-- SVG overlay conservato per compatibilità con script che usano #storyPath -->
-        <svg id="storySvg" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg"
-             style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-          <path id="storyPath" d="" stroke="#f0a030" stroke-width="3" fill="none" stroke-dasharray="10,5" opacity="0"/>
+      <div class="map-container">
+        <svg id="pescaraMap" viewBox="0 0 800 520">
+          <rect width="800" height="520" fill="#d4b870"/>
         </svg>
-
-        <!-- Clickable Story Pins (HTML overlaid on map) -->
-        <div class="map-story-pin" id="pin-filosofia"
-             style="left:20%; top:45%;"
-             onclick="openStory('filosofia')">
-          <div class="pin-img">
-            <!-- Sostituisci il percorso con l'immagine che preferisci -->
-            <img src="dilucchio.png" alt="Filosofia" onerror="this.onerror=null; this.parentNode.innerHTML='🦉';">
-          </div>
-          <div class="pin-label">Filosofia</div>
+        
+        <!-- PINS SULLA MAPPA -->
+        <div class="map-story-pin" style="left: 30%; top: 40%;" data-pin="pin1">
+          <div class="pin-img">👨‍🎓</div>
+          <div class="pin-label">Prof. 1</div>
         </div>
-
-        <div class="map-story-pin" id="pin-scienze"
-             style="left:72%; top:28%;"
-             onclick="openStory('scienze')">
-          <div class="pin-img">
-            <!-- Sostituisci il percorso con l'immagine che preferisci -->
-            <img src="Masciulli (1).png" alt="Scienze" onerror="this.onerror=null; this.parentNode.innerHTML='🔬';">
-          </div>
-          <div class="pin-label">Scienze</div>
+        <div class="map-story-pin" style="left: 50%; top: 30%;" data-pin="pin2">
+          <div class="pin-img">👩‍🎓</div>
+          <div class="pin-label">Prof. 2</div>
         </div>
-
-        <div class="map-story-pin" id="pin-informatica"
-             style="left:55%; top:70%;"
-             onclick="openStory('informatica')">
-          <div class="pin-img">
-            <!-- Sostituisci il percorso con l'immagine che preferisci -->
-            <img src="finizio.png" alt="Informatica" onerror="this.onerror=null; this.parentNode.innerHTML='💻';">
-          </div>
-          <div class="pin-label">Informatica</div>
-        </div>
-
-        <div class="map-story-pin" id="pin-italiano"
-             style="left:38%; top:25%;"
-             onclick="openStory('italiano')">
-            <div class="pin-img">
-                <!-- Sostituisci il percorso con l'immagine che preferisci -->
-                <img src="dinucci.png" alt="Italiano" onerror="this.onerror=null; this.parentNode.innerHTML='📚';">
-            </div>
-          <div class="pin-label">Italiano</div>
+        <div class="map-story-pin" style="left: 70%; top: 50%;" data-pin="pin3">
+          <div class="pin-img">👨‍🏫</div>
+          <div class="pin-label">Prof. 3</div>
         </div>
       </div>
     </div>
-
-    <!-- Story display panel (appears below map when a pin is clicked) -->
+    
     <div id="story-display">
-      <p style="color:rgba(184,130,10,0.5); font-family:'Cinzel',serif; font-size:0.85rem; text-align:center; padding:2rem; letter-spacing:0.1em;">
-        ✦ Clicca su un'immagine nella mappa per iniziare la storia ✦
-      </p>
+      <h3>Clicca su una foto per ingrandirla</h3>
+      <p>Le icone sulla mappa rappresentano i diversi personaggi</p>
     </div>
   </div>
 </section>
 
-<!-- CASINO MEDIEVALE (nuovo funzionamento) -->
-<section class="section" id="casino" style="padding:6rem 0;">
+<!-- MODAL PER LE FOTO INGRANDITE -->
+<div class="pin-modal" id="pinModal">
+  <div class="pin-modal-content">
+    <button class="pin-modal-close" onclick="closeModal()">✕</button>
+    <div class="pin-modal-img" id="modalImg">👨‍🎓</div>
+    <h3 class="pin-modal-title" id="modalTitle">Professore</h3>
+    <p class="pin-modal-desc" id="modalDesc">Descrizione del personaggio</p>
+  </div>
+</div>
+
+<!-- FORUM DELL'AMORE SECTION -->
+<section id="love-forum" class="section">
   <div class="container">
     <div class="section-header">
-      <span class="section-eyebrow">🎲 Intrattenimento</span>
-      <h2 class="section-title">Il Casinò Medievale</h2>
-      <div class="section-divider" style="background:linear-gradient(to right,transparent,#c8a830,transparent);"></div>
-      <p style="color:rgba(200,168,48,0.55); font-family:'Cinzel',serif; margin-top:1rem; font-size:0.82rem; letter-spacing:0.1em;">Solo per divertimento · Nessun soldo reale</p>
+      <span class="section-eyebrow">Corrispondenza Amorosa</span>
+      <h2 class="section-title">Forum dell'Amore</h2>
     </div>
-
-    <div class="casino-board">
-      <div style="font-family:'UnifrakturMaguntia',serif; font-size:1.4rem; color:rgba(200,168,48,0.4); margin-bottom:1.5rem; letter-spacing:0.1em;">
-        ⚜ Tavolo dei Dadi ⚜
+    
+    <div class="love-forum-list">
+      <div class="love-recipient">
+        <div class="love-recipient-name">Fiammetta</div>
+        <div class="love-recipient-desc">Musa e ispirazione principale</div>
       </div>
-
-      <!-- BETTING PHASE -->
-      <div class="bet-area" id="betArea">
-        <h3>✦ Punta prima di lanciare ✦</h3>
-        <p style="color:rgba(200,168,48,0.6); font-family:'Cinzel',serif; font-size:0.75rem; margin-bottom:1.2rem; letter-spacing:0.05em;">
-          La somma dei due dadi sarà MAGGIORE, MINORE o UGUALE a 7?
-        </p>
-        <div class="bet-btns">
-          <button class="bet-btn" id="betMag" onclick="placeBet('maggiore')">▲ Maggiore di 7</button>
-          <button class="bet-btn" id="betUg"  onclick="placeBet('uguale')">= Uguale a 7</button>
-          <button class="bet-btn" id="betMin" onclick="placeBet('minore')">▼ Minore di 7</button>
-        </div>
-        <div id="betChosen" style="margin-top:1rem; font-family:'Cinzel',serif; font-size:0.8rem;
-             color:rgba(200,168,48,0.7); min-height:1.5rem; letter-spacing:0.08em;"></div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Emilia</div>
+        <div class="love-recipient-desc">Bella e nobile fanciulla</div>
       </div>
-
-      <!-- DICE -->
-      <div class="dice-area">
-        <div class="die" id="die1">
-          <div class="dot" id="d1-1"></div><div class="dot" id="d1-2"></div><div class="dot" id="d1-3"></div>
-          <div class="dot" id="d1-4"></div><div class="dot" id="d1-5"></div><div class="dot" id="d1-6"></div>
-          <div class="dot" id="d1-7"></div><div class="dot" id="d1-8"></div><div class="dot" id="d1-9"></div>
-        </div>
-        <div class="die" id="die2">
-          <div class="dot" id="d2-1"></div><div class="dot" id="d2-2"></div><div class="dot" id="d2-3"></div>
-          <div class="dot" id="d2-4"></div><div class="dot" id="d2-5"></div><div class="dot" id="d2-6"></div>
-          <div class="dot" id="d2-7"></div><div class="dot" id="d2-8"></div><div class="dot" id="d2-9"></div>
-        </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Alessandra</div>
+        <div class="love-recipient-desc">Donna di straordinaria bellezza</div>
       </div>
-
-      <div class="casino-result neutral" id="casinoResult">Scegli la tua puntata, poi lancia!</div>
-
-      <button class="roll-btn" id="rollBtn" onclick="rollDice()" disabled>⚔ Lancia i Dadi ⚔</button>
-
-      <div class="casino-stats">
-        <div class="c-stat">
-          <span class="c-stat-label">Lanci Totali</span>
-          <span class="c-stat-val" id="totalRolls">0</span>
-        </div>
-        <div class="c-stat">
-          <span class="c-stat-label">Vittorie</span>
-          <span class="c-stat-val" id="totalWins">0</span>
-        </div>
-        <div class="c-stat">
-          <span class="c-stat-label">Sconfitte</span>
-          <span class="c-stat-val" id="totalLosses">0</span>
-        </div>
-        <div class="c-stat">
-          <span class="c-stat-label">% Vittoria</span>
-          <span class="c-stat-val" id="winPct">—</span>
-        </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Beatrice</div>
+        <div class="love-recipient-desc">Musa della virtù e della grazia</div>
       </div>
-
-      <div class="history-list" id="diceHistory">
-        <div style="font-family:'Cinzel',serif; font-size:0.75rem; color:rgba(200,168,48,0.35); text-align:center; padding:1rem; letter-spacing:0.1em;">Nessun lancio ancora...</div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Caterina</div>
+        <div class="love-recipient-desc">Saggio della saggezza femminile</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Diamante</div>
+        <div class="love-recipient-desc">Presio e splendente</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Eloisa</div>
+        <div class="love-recipient-desc">Donna di passione e culture</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Francesca</div>
+        <div class="love-recipient-desc">Donna di amore tragico</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Gabriella</div>
+        <div class="love-recipient-desc">Grazia incarnata</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Henrietta</div>
+        <div class="love-recipient-desc">Nobile e affascinante</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Isabella</div>
+        <div class="love-recipient-desc">Regina del cuore</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Jacinta</div>
+        <div class="love-recipient-desc">Delicata e raffinata</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Kallista</div>
+        <div class="love-recipient-desc">La più bella tra le donne</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Lucia</div>
+        <div class="love-recipient-desc">Luce della passione</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Maddalena</div>
+        <div class="love-recipient-desc">Donna di mistero e fascino</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Nicoletta</div>
+        <div class="love-recipient-desc">Vittoria dell'amore</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Olimpia</div>
+        <div class="love-recipient-desc">Dea della bellezza</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Paola</div>
+        <div class="love-recipient-desc">Donna di nobiltà</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Quintilia</div>
+        <div class="love-recipient-desc">Rara e preziosa</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Rosalinda</div>
+        <div class="love-recipient-desc">Rosa dell'amore</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Simonetta</div>
+        <div class="love-recipient-desc">Stella della bellezza</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Teodora</div>
+        <div class="love-recipient-desc">Dono di Dio</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Urbana</div>
+        <div class="love-recipient-desc">Donna di civiltà</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Valeria</div>
+        <div class="love-recipient-desc">Forte e valorosa</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Vittoria</div>
+        <div class="love-recipient-desc">Vincitrice dei cuori</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Xenia</div>
+        <div class="love-recipient-desc">Ospitalità e gentilezza</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Yolanda</div>
+        <div class="love-recipient-desc">Violetta del passione</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Zefira</div>
+        <div class="love-recipient-desc">Vento d'amore</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Adriana</div>
+        <div class="love-recipient-desc">Donna dell'Adriatico</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Bianca</div>
+        <div class="love-recipient-desc">Purezza e innocenza</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Cecilia</div>
+        <div class="love-recipient-desc">Musica dell'amore</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Donatella</div>
+        <div class="love-recipient-desc">Donna donata dal cielo</div>
+      </div>
+      <div class="love-recipient">
+        <div class="love-recipient-name">Evangelina</div>
+        <div class="love-recipient-desc">Benedizione divina</div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- FORUM AMORE (senza admin, messaggi pubblici diretti) -->
-<section class="section" id="forum" style="padding:6rem 0;">
-  <div class="container">
-      <div class="section-header">
-      <span class="section-eyebrow">💌 Forum dell'Amore</span>
-      <h2 class="section-title">Lettere Anonime</h2>
-      <div class="section-divider" style="background:linear-gradient(to right,transparent,var(--gold),transparent);"></div>
-      <p style="color:rgba(60,40,20,0.85); font-family:'Cinzel',serif; margin-top:1rem; font-size:0.8rem; letter-spacing:0.1em;">Scrivi una lettera — apparirà pubblicamente sul bacheco, visibile a tutti</p>
-    </div>
-
-    <div class="forum-container">
-      <!-- FORM -->
-      <div class="forum-card">
-        <h3>✉ Scrivi una Lettera</h3>
-        <p class="subtitle">Resterai anonimo — solo le parole contano</p>
-
-        <select class="forum-select" id="destSelect" style="color:white; background:black;">
-          <option value="">— A chi è destinata? —</option>
-          <option value="La Ragazza della 3AL">La Ragazza della 3AL</option>
-          <option value="Il Ragazzo dai Capelli Ricci">Il Ragazzo dai Capelli Ricci</option>
-          <option value="Il Prof di Matematica">Il Prof di Matematica</option>
-          <option value="Il Compagno di Banco">Il Compagno di Banco</option>
-          <option value="L'Amica del Cuore">L'Amica del Cuore</option>
-          <option value="La Sorella Maggiore">La Sorella Maggiore</option>
-          <option value="Giulia Di Nicola">Giulia Di Nicola</option>
-          <option value="Professore Alessandro Di Nucci">Professore Alessandro Di Nucci</option>
-        </select>
-
-        <input class="forum-input" id="letterSubject" type="text" placeholder="Oggetto (opzionale)" style="color:white; background:black;">
-
-        <textarea class="forum-textarea" id="letterBody"
-          placeholder="Scrivi qui il tuo messaggio... Sarà visibile a tutti sul bacheco, ma non si saprà che sei tu." style="color:white; background:black;"></textarea>
-
-        <button class="forum-submit" onclick="sendLetter()" style="color:var(--ink);">💌 Pubblica sul Bacheco</button>
-      </div>
-
-      <!-- FEED (tutte le lettere, visibili subito) -->
-      <div class="forum-card">
-        <h3>📬 Bacheco Amoroso</h3>
-        <p class="subtitle">Messaggi pubblici — visibili a tutti</p>
-        <div class="letters-feed" id="lettersFeed">
-          <div style="text-align:center; padding:2rem; color:rgba(60,40,20,0.35);
-               font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.05em;">
-            Le lettere inviate appariranno qui istantaneamente ✉
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-title">Giovanni Boccaccio · 1313–1375</div>
-  <p style="margin-top:0.5rem; opacity:0.6; font-style:italic; font-family:'EB Garamond',serif; font-size:1rem;">"Umana cosa è aver compassione degli afflitti"</p>
-  <p style="margin-top:0.3rem; opacity:0.4; font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:0.2em;">DECAMERONE · PROEMIO</p>
-  <p style="margin-top:1.5rem; opacity:0.25; font-size:0.65rem; letter-spacing:0.15em;">Sito didattico · Contenuti enciclopedici · Sezioni interattive di intrattenimento</p>
-</footer>
 
 <script>
-// ── NAVIGATION ACTIVE STATE ──
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('nav a.nav-link');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
-  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+current));
-});
+// FUNZIONI PER LA MODAL DEI PIN
+const pinData = {
+  pin1: {
+    title: 'Professore 1',
+    desc: 'Un sapiente della corte, colto e raffinato, portatore di saggezza e verità.',
+    emoji: '👨‍🎓'
+  },
+  pin2: {
+    title: 'Professoressa 2',
+    desc: 'Una donna di straordinaria intelletto, che guida le menti verso la conoscenza.',
+    emoji: '👩‍🎓'
+  },
+  pin3: {
+    title: 'Professore 3',
+    desc: 'Maestro di rettorica e letteratura, custode delle arti liberali.',
+    emoji: '👨‍🏫'
+  }
+};
 
-// ── OPERE FILTER ──
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.opera-card[data-type]').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.type === f) ? 'block' : 'none';
-    });
+document.querySelectorAll('.map-story-pin').forEach(pin => {
+  pin.addEventListener('click', function() {
+    const pinId = this.dataset.pin;
+    const data = pinData[pinId];
+    
+    document.getElementById('modalImg').textContent = data.emoji;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalDesc').textContent = data.desc;
+    
+    document.getElementById('pinModal').classList.add('active');
   });
 });
 
-// ── TAB SYSTEM ──
+function closeModal() {
+  document.getElementById('pinModal').classList.remove('active');
+}
+
+document.getElementById('pinModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
+
+// INTERATTIVITÀ FORUM AMORE
+document.querySelectorAll('.love-recipient').forEach(card => {
+  card.addEventListener('click', function() {
+    alert('Scrivi una lettera a ' + this.querySelector('.love-recipient-name').textContent);
+  });
+});
+
+// TAB NAVIGATION
 document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tab = btn.dataset.tab;
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-'+tab).classList.add('active');
+  btn.addEventListener('click', function() {
+    const tabName = this.dataset.tab;
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+      pane.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    this.classList.add('active');
   });
 });
-
-// ── GIORNATE ──
-const giornateData = {
-  1: { tema:"Tema libero", desc:"La prima giornata, senza tema prestabilito, vede Pampinea come regina. Le novelle spaziano dalla satira anticlericale (Ser Ciappelletto) alla riflessione sulla Fortuna. Dioneo ottiene il privilegio di narrare sempre per ultimo senza dover seguire il tema assegnato." },
-  2: { tema:"Chi riesce a salvarsi per ingegno", desc:"Protagonisti di avventure pericolose che si risolvono felicemente grazie all'ingegno dei personaggi. Include la celebre novella di Andreuccio da Perugia, avventura notturna nelle strade di Napoli che da povertà porta a una gemma preziosa." },
-  3: { tema:"Chi ottiene ciò che desidera", desc:"Personaggi che attraverso l'ingegno o la fortuna riescono ad ottenere qualcosa di arduo o perduto. Molte novelle hanno tematiche amorose con esiti lieti, spesso con protagoniste femminili molto attive e intraprendenti." },
-  4: { tema:"Amori con esito infelice", desc:"L'unica giornata con tema tragico, imposta da Filostrato. Include storie di amanti separati dalla morte, dalla gelosia o dalla crudeltà dei parenti: Lisabetta da Messina, Ghismonda e Tancredi, la storia del cuore mangiato." },
-  5: { tema:"Amori con lieto fine", desc:"In risposta alla IV giornata, Fiammetta impone storie d'amore che finiscono bene nonostante le difficoltà iniziali. Include la celebre novella di Federigo degli Alberighi e il suo falcone, icona della liberalità medievale." },
-  6: { tema:"Il motto di spirito e la battuta arguta", desc:"Novelle brevi e brillanti centrate sulla parola usata con intelligenza. La brevità e l'acume sono le virtù celebrate. Include la novella di Madonna Oretta e quella di Guido Cavalcanti che smonta un'imboscata con una sola frase." },
-  7: { tema:"Beffe delle mogli ai mariti", desc:"Mariti gelosi o sciocchi ingannati dalle loro mogli astute. La satira è diretta contro la gelosia maschile come vizio ridicolo. Tonalità decisamente farsesca e comica, con protagoniste femminili molto vivaci." },
-  8: { tema:"Beffe reciproche tra uomini e donne", desc:"Le beffe non sono più solo delle mogli ai mariti ma avvengono in tutte le direzioni. Include la lunga storia di Bruno e Buffalmacco, i due pittori burloni fiorentini che prendono in giro il credulone Calandrino." },
-  9: { tema:"Tema libero", desc:"La seconda giornata senza tema fisso. Emilia è la regina. Le novelle sono varie per tono e argomento, dall'erotico al moralistico. Dioneo narra una novella particolarmente licenziosa che chiude il cerchio comico dell'opera." },
-  10:{ tema:"Liberalità e magnificenza d'animo", desc:"L'ultima giornata ha il tono più elevato e nobile. Protagonisti sono personaggi che dimostrano generosità d'animo straordinaria. Culmina con la storia di Griselda, la novella più discussa e controversa dell'intera raccolta." }
-};
-
-function showGiornata(n) {
-  const d = giornateData[n];
-  const detail = document.getElementById('giornataDetail');
-  detail.style.display = 'block';
-  detail.innerHTML = `<h4 style="font-family:'Cinzel',serif; color:var(--red-medieval); margin-bottom:0.5rem; font-size:1rem; letter-spacing:0.08em;">Giornata ${toRoman(n)} — ${d.tema}</h4><p style="font-size:0.92rem; color:var(--ink-light);">${d.desc}</p>`;
-  detail.scrollIntoView({ behavior:'smooth', block:'nearest' });
-}
-function toRoman(n) { return ['I','II','III','IV','V','VI','VII','VIII','IX','X'][n-1]; }
-
-// ── MAP STORIES ──
-  const stories = {
-  filosofia: {
-    title: "🦉 La Crisi Esistenziale Finale",
-    color: "#ffffff",
-    subject: "Filosofia",
-    steps: [
-      { loc: "La polvere filosofica", text: "Ore 8:03. Aula di filosofia. Il prof entra in silenzio, appoggia i libri e sospira: “Ragazzi… oggi parliamo di Platone.” Ma appena apre il libro, succede qualcosa di terribile. Una nube di polvere esce dalle pagine e invade l’aula. Sulla lavagna compare da sola una scritta: FILOSOFITE CONTAGIOSA." },
-      { loc: "I primi sintomi", text: "Ore 8:03. Aula di filosofia. Il prof entra in silenzio, appoggia i libri e sospira: “Ragazzi… oggi parliamo di Platone.” Ma appena apre il libro, succede qualcosa di terribile. Una nube di polvere esce dalle pagine e invade l’aula. Sulla lavagna compare da sola una scritta: FILOSOFITE CONTAGIOSA." },
-      { loc: "La crisi esistenziale", text: "Uno dopo l’altro gli studenti iniziano a cambiare: c’è chi cita Socrate senza motivo; chi cammina nel corridoio pensando alla vita; chi ripete “so di non sapere” mentre cerca il bagno. Tu e i superstiti cercate di scappare, ma il prof vi blocca: “Nessuno lascia l’aula finché non distingue idealismo e nichilismo.”" },
-      { loc: "La verifica finale", text: "Noemi urla: “PRENDETE I RIASSUNTI E CORRETE!” Il prof-malattia ride: “Troppo tardi… avete tutti una verifica orale domani.” E in quel momento… anche il secchione della classe inizia a sudare freddo." }
-    ]
-  },
-  scienze: {
-    title: "🔬 L’Evoluzione della Verifica",
-    color: "#ffffff",
-    subject: "Scienze",
-    steps: [
-      { loc: "Il virus PROF-9000", text: "La porta dell’aula si chiude lentamente. La prof di biologia appoggia il registro sulla cattedra… ma qualcosa non va. “Ragazzi…” dice con voce stranamente metallica. “Da oggi… non interrogo più. Vi INFETTO.” Le luci iniziano a lampeggiare. Sul registro compare scritto: VIRUS PROF-9000, livello di contagio: interrogazione a sorpresa." },
-      { loc: "Il contagio biologico", text: "Tu e i tuoi compagni vi guardate terrorizzati. “Chi non sa le biotecnologie” continua la prof-virus “…verrà trasformato in una cellula procariote.” All’improvviso Gabriele urla: “SCAPPATE!” Parte la fuga: Daniele lancia un libro di scienze come diversivo. Giulia apre la finestra gridando: “Verso il laboratorio!”" },
-      { loc: "L’evoluzione della prof", text: "La prof-virus allunga il braccio tipo mutazione biologica: “NESSUNO SFUGGE ALLA VERIFICA SULLE COMPETENZE!” Nel corridoio compare il bidello: “Che succede qui?!” E voi: “LA PROF SI È EVOLUTA!” La prof-virus sorride: “L’evoluzione è parte del programma…”" },
-      { loc: "La verifica finale", text: "Poi tira fuori il colpo finale: la verifica non annunciata da 12 pagine. Silenzio assoluto. Persino quelli dell’ultimo banco iniziano a correre." }
-    ]
-  },
-  informatica: {
-    title: "💻 Crash del Sistema Scolastico",
-    color: "#ffffff",
-    subject: "Informatica",
-    steps: [
-      { loc: "La chiavetta nera", text: "Ore 11:42. Laboratorio di informatica. I computer si accendono da soli. Il prof entra in aula senza dire una parola, con una chiavetta USB nera in mano. La collega lentamente al PC centrale. Schermo blu. Poi compare una scritta gigantesca: INFORMATICHITE.EXE, virus altamente contagioso. Il prof sorride: “Oggi facciamo un piccolo programma in C++.”" },
-      { loc: "Il contagio digitale", text: "In quel momento parte il contagio. I monitor iniziano a lampeggiare. Le tastiere scrivono da sole. Il primo a essere infettato è Pietro: “Ragazzi… credo di parlare in codice binario…” “101010 HELP 1010…” Troppo tardi. Uno dopo l’altro gli studenti cambiano: alcuni correggono errori immaginari nell’aria; altri iniziano a dire “manca il punto e virgola” ogni 3 secondi; uno urla “CHI HA CANCELLATO IL DATABASE?!”" },
-      { loc: "Il prof-virus", text: "Il prof-virus cammina lentamente tra i banchi. “Compilate il programma…” sussurra. “…oppure verrete eliminati dal sistema.” PANICO TOTALE. Giulia tenta la fuga staccando la corrente… ma i PC restano accesi. Sul proiettore appare il boss finale: ERRORE ALLA RIGA 1. Nessuno sa cosa significhi. Nessuno sa come risolverlo." },
-      { loc: "Crash finale", text: "Il secchione prova a salvare la classe: “Prof, forse basta riavviare—” Crash totale. Le luci si spengono. Poi la voce del prof risuona nel buio: “Per domani… interrogazione sui linguaggi di programmazione.” Silenzio. Persino il Wi-Fi smette di funzionare dalla paura." }
-    ]
-  },
-  italiano: {
-    title: "📚 L’Apocalisse Poetica",
-    color: "#ffffff",
-    subject: "Italiano",
-    steps: [
-      { loc: "CLASSE 3AL — Ora di Italiano", text: "Ore 10:17. Il prof di letteratura entra in aula con passo lentissimo, tenendo sotto braccio un enorme libro impolverato. Nessuno parla. Lui apre il registro… e una pagina cade a terra da sola. Sopra c’è scritto LETTERATURITE ACUTA Malattia estremamente contagiosa Il prof alza lo sguardo: “Ragazzi… oggi analizziamo 47 pagine di poesia.”" },
-      { loc: "Il contagio poetico", text: "All’improvviso parte il contagio. Il primo a essere colpito è Davide: si alza in piedi e comincia a parlare in endecasillabi. “Oddio,” sussurra qualcuno, “ha preso la dantite…” Poi peggiora: alcuni iniziano a citare autori senza controllo; altri fissano la finestra dicendo “che potente metafora della solitudine”; uno in fondo urla: “LEOPARDI MI CAPISCE!”" },
-      { loc: "Le spore letterarie", text: "Il prof sorride lentamente mentre sfoglia il libro. Ogni pagina diffonde nuove spore letterarie: Verga provoca tristezza improvvisa; Manzoni fa parlare tutti in modo super formale; D’Annunzio aumenta l’ego del 300%. Tu e i pochi sopravvissuti cercate di uscire dall’aula, ma il prof chiude la porta. “Nessuno scappa…” dice piano. “Prima dovete analizzare il significato nascosto del titolo.” PANICO." },
-      { loc: "Il tema finale", text: "Susanna tenta di salvarsi leggendo il riassunto online… ma è troppo tardi. Il contagio finale arriva quando il prof pronuncia le parole proibite: “Tema argomentativo… a sorpresa.” Urla in tutta la scuola. Persino quelli di matematica iniziano a correre nei corridoi" }
-    ]
-  }
-};
-
-let currentStory = null;
-let currentStep = 0;
-
-function openStory(name) {
-  currentStory = name;
-  currentStep = 0;
-  // Update pin active state
-  document.querySelectorAll('.map-story-pin').forEach(p => p.classList.remove('active'));
-  document.getElementById('pin-'+name).classList.add('active');
-  renderStoryStep();
-  // Scroll to display
-  document.getElementById('story-display').scrollIntoView({ behavior:'smooth', block:'nearest' });
-}
-
-function renderStoryStep() {
-  if (!currentStory) return;
-  const story = stories[currentStory];
-  const step = story.steps[currentStep];
-  const display = document.getElementById('story-display');
-  const isLast = currentStep === story.steps.length - 1;
-  const isFirst = currentStep === 0;
-
-  display.innerHTML = `
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
-      <h3 style="color:var(--parchment);">${story.title}</h3>
-      <span style="font-family:'Cinzel',serif; font-size:0.7rem; color:rgba(184,130,10,0.55); letter-spacing:0.15em;">
-        TAPPA ${currentStep+1} / ${story.steps.length}
-      </span>
-    </div>
-    <div style="font-family:'Cinzel',serif; font-size:0.72rem; color:var(--gold-light); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.8rem; opacity:0.95;">
-      📍 ${step.loc}
-    </div>
-    <p style="color:var(--parchment); font-size:0.95rem; line-height:1.75; font-family:'EB Garamond',serif;">${step.text}</p>
-    <div class="story-nav-btns">
-      <button class="sn-btn" onclick="prevStep()" ${isFirst?'disabled':''}>← Indietro</button>
-      <button class="sn-btn" onclick="nextStep()">${isLast ? '🏁 Fine Storia' : 'Avanti →'}</button>
-    </div>
-  `;
-}
-
-function nextStep() {
-  if (!currentStory) return;
-  const story = stories[currentStory];
-  if (currentStep < story.steps.length - 1) {
-    currentStep++;
-    renderStoryStep();
-  } else {
-    document.getElementById('story-display').innerHTML +=
-      '<br><p style="color:var(--gold-light); font-family:Cinzel,serif; font-size:0.85rem; text-align:center; letter-spacing:0.1em;">✦ Fine della storia! Clicca un\'altra immagine per la prossima avventura. ✦</p>';
-  }
-}
-
-function prevStep() {
-  if (currentStep > 0) { currentStep--; renderStoryStep(); }
-}
-
-// ── DICE GAME (new betting logic) ──
-let totalRolls = 0, totalWins = 0, totalLosses = 0;
-let currentBet = null;
-let historyItems = [];
-
-const dotPatterns = {
-  1:[5], 2:[3,7], 3:[3,5,7], 4:[1,3,7,9], 5:[1,3,5,7,9], 6:[1,3,4,6,7,9]
-};
-
-function renderDie(dieId, value) {
-  const pattern = dotPatterns[value];
-  for (let i = 1; i <= 9; i++) {
-    const dot = document.getElementById(`${dieId}-${i}`);
-    if (dot) dot.classList.toggle('visible', pattern.includes(i));
-  }
-}
-
-function placeBet(bet) {
-  currentBet = bet;
-  document.querySelectorAll('.bet-btn').forEach(b => b.classList.remove('selected'));
-  const btnIds = { maggiore:'betMag', uguale:'betUg', minore:'betMin' };
-  document.getElementById(btnIds[bet]).classList.add('selected');
-  const labels = { maggiore:'▲ Maggiore di 7', uguale:'= Uguale a 7', minore:'▼ Minore di 7' };
-  document.getElementById('betChosen').textContent = '✦ Hai puntato: ' + labels[bet];
-  document.getElementById('rollBtn').disabled = false;
-  document.getElementById('casinoResult').textContent = 'Puntata confermata! Ora lancia i dadi.';
-  document.getElementById('casinoResult').className = 'casino-result neutral';
-}
-
-function rollDice() {
-  if (!currentBet) return;
-  const btn = document.getElementById('rollBtn');
-  btn.disabled = true;
-  btn.textContent = '⏳ Lancio...';
-  document.querySelectorAll('.bet-btn').forEach(b => b.disabled = true);
-
-  const d1El = document.getElementById('die1');
-  const d2El = document.getElementById('die2');
-  d1El.classList.add('rolling');
-  d2El.classList.add('rolling');
-
-  let flickers = 0;
-  const flicker = setInterval(() => {
-    renderDie('d1', Math.ceil(Math.random()*6));
-    renderDie('d2', Math.ceil(Math.random()*6));
-    flickers++;
-    if (flickers > 10) {
-      clearInterval(flicker);
-      const v1 = Math.ceil(Math.random()*6);
-      const v2 = Math.ceil(Math.random()*6);
-      renderDie('d1', v1);
-      renderDie('d2', v2);
-      d1El.classList.remove('rolling');
-      d2El.classList.remove('rolling');
-      finishRoll(v1, v2);
-    }
-  }, 80);
-}
-
-function finishRoll(v1, v2) {
-  const sum = v1 + v2;
-  totalRolls++;
-
-  // Determine actual result
-  let actual;
-  if (sum > 7) actual = 'maggiore';
-  else if (sum === 7) actual = 'uguale';
-  else actual = 'minore';
-
-  const won = actual === currentBet;
-  if (won) totalWins++; else totalLosses++;
-
-  const resultEl = document.getElementById('casinoResult');
-  const sumLabels = { maggiore:'MAGGIORE', uguale:'UGUALE', minore:'MINORE' };
-  const betLabels = { maggiore:'maggiore di 7', uguale:'uguale a 7', minore:'minore di 7' };
-
-  if (won) {
-    resultEl.textContent = `🎉 ${v1} + ${v2} = ${sum} — ${sumLabels[actual]} a 7! Hai indovinato!`;
-    resultEl.className = 'casino-result win';
-  } else {
-    resultEl.textContent = `💀 ${v1} + ${v2} = ${sum} — ${sumLabels[actual]} a 7! Avevi puntato ${betLabels[currentBet]}.`;
-    resultEl.className = 'casino-result lose';
-  }
-
-  // Update stats
-  document.getElementById('totalRolls').textContent = totalRolls;
-  document.getElementById('totalWins').textContent = totalWins;
-  document.getElementById('totalLosses').textContent = totalLosses;
-  const pct = Math.round((totalWins/totalRolls)*100);
-  document.getElementById('winPct').textContent = pct + '%';
-
-  // History
-  const now = new Date();
-  const timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
-  historyItems.unshift({ v1, v2, sum, won, bet: currentBet, time: timeStr });
-  if (historyItems.length > 10) historyItems.pop();
-
-  const betLabelsShort = { maggiore:'>', uguale:'=', minore:'<' };
-  document.getElementById('diceHistory').innerHTML = historyItems.map(item => `
-    <div class="history-item">
-      <span class="history-label">[${item.time}]</span>
-      🎲 ${item.v1}+${item.v2}=<span style="color:#f0d060;font-weight:700;">${item.sum}</span>
-      Puntata:<span style="color:${item.won?'#60e080':'#e06060'};">${betLabelsShort[item.bet]}7</span>
-      → <span style="color:${item.won?'#60e080':'#e06060'};font-weight:700;">${item.won?'✓ VINTO':'✗ PERSO'}</span>
-    </div>
-  `).join('');
-
-  // Re-enable after a moment
-  setTimeout(() => {
-    currentBet = null;
-    document.querySelectorAll('.bet-btn').forEach(b => { b.classList.remove('selected'); b.disabled = false; });
-    document.getElementById('betChosen').textContent = '';
-    document.getElementById('rollBtn').disabled = true;
-    document.getElementById('rollBtn').textContent = '⚔ Lancia i Dadi ⚔';
-  }, 1800);
-}
-
-// ── FORUM AMORE (no admin, public immediate) ──
-let letters = [];
-
-function sendLetter() {
-  const dest = document.getElementById('destSelect').value;
-  const subj = document.getElementById('letterSubject').value.trim();
-  const body = document.getElementById('letterBody').value.trim();
-
-  if (!dest) { alert('Scegli un destinatario!'); return; }
-  if (!body) { alert('Scrivi il messaggio!'); return; }
-
-  const letter = {
-    id: Date.now(),
-    dest, subj: subj || 'Senza Oggetto', body,
-    time: new Date().toLocaleString('it-IT', { day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' })
-  };
-
-  letters.unshift(letter);
-  renderLetters();
-
-  document.getElementById('destSelect').value = '';
-  document.getElementById('letterSubject').value = '';
-  document.getElementById('letterBody').value = '';
-}
-
-function renderLetters() {
-  const feed = document.getElementById('lettersFeed');
-  if (letters.length === 0) {
-    feed.innerHTML = '<div style="text-align:center; padding:2rem; color:rgba(240,144,192,0.35); font-family:Cinzel,serif; font-size:0.8rem;">Nessuna lettera ancora...</div>';
-    return;
-  }
-  feed.innerHTML = letters.map(l => `
-    <div class="letter-item">
-      <div class="letter-meta">${l.time}</div>
-      <div class="letter-to">✉ A: ${l.dest}</div>
-      <div style="font-family:'Cinzel',serif; font-size:0.68rem; color:rgba(240,144,192,0.45); margin-bottom:0.5rem; letter-spacing:0.05em;">${l.subj}</div>
-      <div class="letter-body">${l.body.length > 200 ? l.body.slice(0,200)+'...' : l.body}</div>
-    </div>
-  `).join('');
-}
-
-// ── INIT ──
-renderDie('d1', 1);
-renderDie('d2', 1);
-renderLetters();
 </script>
+
 </body>
 </html>
